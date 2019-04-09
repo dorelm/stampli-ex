@@ -1,0 +1,4 @@
+name1,textbox,1,1
+name2,combobox,val1;val2;val3,1,2
+name3,radiobutton,val4;val5,2,1
+name4,list,val6;val7;val8,3,1
