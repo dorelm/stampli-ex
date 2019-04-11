@@ -13,4 +13,12 @@ export class ElementsGridComponent implements OnInit {
   ngOnInit() {
   }
 
+  getNumberOfColumns() {
+    if (this.parsedElementsGridService.grid) {
+      // get the length of the first row
+      return this.parsedElementsGridService.grid[0].length;
+    } else {
+      return 0;
+    }
+  }
 }
