@@ -1,12 +1,15 @@
-<mat-grid-list cols="{{getNumberOfColumns()}}" gutterSize="20px" rowHeight="70px">
-  <div *ngFor="let row of parsedElementsGridService.grid">
-    <div *ngFor="let element of row">
-      <mat-grid-tile>
+<div *ngIf="parsedElementsGridService.grid">
+  <div [ngStyle]="{'display': 'grid',
+'grid-template-columns': 'repeat('+parsedElementsGridService.grid[0].length+', 1fr)',
+'grid-template-rows':'repeat('+parsedElementsGridService.grid.length+', 1fr)'}"
+       style="grid-column-gap: 40px; grid-row-gap: 40px">
+    <div *ngFor="let element of parsedElementsGridService.grid.flat()">
+      <div [ngStyle]="{'grid-column': element.column, 'grid-row': element.row}">
         <app-dr-textbox *ngIf="element.type === 'textbox'" [element]="element"></app-dr-textbox>
         <app-dr-combobox *ngIf="element.type === 'combobox'" [element]="element"></app-dr-combobox>
         <app-dr-radio-group *ngIf="element.type === 'radiobutton'" [element]="element"></app-dr-radio-group>
         <app-dr-list *ngIf="element.type === 'list'" [element]="element"></app-dr-list>
-      </mat-grid-tile>
+      </div>
     </div>
   </div>
-</mat-grid-list>
+</div>

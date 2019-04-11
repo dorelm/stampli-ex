@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ParsedElementsGridService} from '../parsed-elements-grid.service';
+import {Element} from '../models/Element';
 
 @Component({
   selector: 'app-elements-grid',
