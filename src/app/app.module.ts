@@ -7,12 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { ElementsGridComponent } from './elements-grid/elements-grid.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModulesModule} from './material-modules/material-modules.module';
+import { DrComboboxComponent } from './dr-combobox/dr-combobox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DrawerInputComponent,
-    ElementsGridComponent
+    ElementsGridComponent,
+    DrComboboxComponent
   ],
   imports: [
     BrowserModule,

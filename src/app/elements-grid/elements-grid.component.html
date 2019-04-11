@@ -9,14 +9,7 @@
         </mat-form-field>
 
 
-        <mat-form-field *ngIf="element.type === 'combobox'">
-          <mat-label>{{element.name}}</mat-label>
-          <mat-select>
-            <mat-option *ngFor="let entry of element.value" [value]="entry.key">
-              {{entry.value}}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
+        <app-dr-combobox *ngIf="element.type === 'combobox'" [element]="element"></app-dr-combobox>
 
         <div *ngIf="element.type === 'radiobutton'">
           <label id="{{'radio' + element.row + '&' + element.column}}">{{element.name}}</label>
