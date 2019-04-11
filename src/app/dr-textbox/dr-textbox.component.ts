@@ -4,7 +4,7 @@ import {Element} from '../models/Element';
 @Component({
   selector: 'app-dr-textbox',
   templateUrl: './dr-textbox.component.html',
-  styleUrls: ['./dr-textbox.component.less']
+  styleUrls: []
 })
 export class DrTextboxComponent implements OnInit {
   @Input()

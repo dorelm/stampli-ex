@@ -4,7 +4,7 @@ import {Element} from '../models/Element';
 @Component({
   selector: 'app-dr-list',
   templateUrl: './dr-list.component.html',
-  styleUrls: ['./dr-list.component.less']
+  styleUrls: []
 })
 export class DrListComponent implements OnInit {
   @Input()

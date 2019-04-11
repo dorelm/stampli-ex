@@ -4,7 +4,7 @@ import { Element} from '../models/Element';
 @Component({
   selector: 'app-dr-combobox',
   templateUrl: './dr-combobox.component.html',
-  styleUrls: ['./dr-combobox.component.less']
+  styleUrls: []
 })
 export class DrComboboxComponent implements OnInit {
   @Input()

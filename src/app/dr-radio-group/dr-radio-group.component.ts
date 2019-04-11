@@ -4,7 +4,7 @@ import { Element} from '../models/Element';
 @Component({
   selector: 'app-dr-radio-group',
   templateUrl: './dr-radio-group.component.html',
-  styleUrls: ['./dr-radio-group.component.less']
+  styleUrls: []
 })
 export class DrRadioGroupComponent implements OnInit {
   @Input()
