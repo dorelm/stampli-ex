@@ -8,13 +8,15 @@ import { ElementsGridComponent } from './elements-grid/elements-grid.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModulesModule} from './material-modules/material-modules.module';
 import { DrComboboxComponent } from './dr-combobox/dr-combobox.component';
+import { DrTextboxComponent } from './dr-textbox/dr-textbox.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DrawerInputComponent,
     ElementsGridComponent,
-    DrComboboxComponent
+    DrComboboxComponent,
+    DrTextboxComponent
   ],
   imports: [
     BrowserModule,

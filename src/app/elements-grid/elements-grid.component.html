@@ -4,9 +4,8 @@
       <div *ngFor="let element of row"
            class="grid-cell">
 
-        <mat-form-field *ngIf="element.type === 'textbox'">
-          <input matInput placeholder="{{element.name}}" value="{{element.value}}">
-        </mat-form-field>
+        <app-dr-textbox *ngIf="element.type === 'textbox'" [element]="element">
+        </app-dr-textbox>
 
 
         <app-dr-combobox *ngIf="element.type === 'combobox'" [element]="element"></app-dr-combobox>
