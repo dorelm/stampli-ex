@@ -1,2 +1,7 @@
-<textarea [(ngModel)]="txtInput"></textarea>
-<button (click)="draw()">Draw</button>
+<mat-form-field class="drawer-input">
+  <textarea matInput [(ngModel)]="txtInput"></textarea>
+</mat-form-field>
+<button mat-button (click)="draw()"
+        style="margin: 10px">
+  Draw
+</button>

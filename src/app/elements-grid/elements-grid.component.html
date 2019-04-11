@@ -1,26 +1,41 @@
-<div *ngFor="let row of parsedElementsGridService.grid">
-  <div *ngFor="let element of row">
-    <span>{{element.name}}</span>
-    <input *ngIf="element.type === 'textbox'"
-           type="text" value="{{element.value}}">
+<div class="grid-container">
+  <div *ngFor="let row of parsedElementsGridService.grid">
+    <div class="grid-row">
+      <div *ngFor="let element of row"
+           class="grid-cell">
 
-    <select *ngIf="element.type === 'combobox'">
-      <option *ngFor="let entry of element.value" value="{{entry.key}}">{{entry.value}}</option>
-    </select>
+        <mat-form-field *ngIf="element.type === 'textbox'">
+          <input matInput placeholder="{{element.name}}" value="{{element.value}}">
+        </mat-form-field>
 
-    <div *ngIf="element.type === 'radiobutton'">
-      <div *ngFor="let radioEntry of element.value">
-        <input type="radio" name="{{'radio' + element.row + '&' + element.column}}"
-               value="{{radioEntry.key}}"> {{radioEntry.value}}<br>
+
+        <mat-form-field *ngIf="element.type === 'combobox'">
+          <mat-label>{{element.name}}</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let entry of element.value" [value]="entry.key">
+              {{entry.value}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div *ngIf="element.type === 'radiobutton'">
+          <label id="{{'radio' + element.row + '&' + element.column}}">{{element.name}}</label>
+          <mat-radio-group>
+            <mat-radio-button *ngFor="let radioEntry of element.value"
+                              name="{{'radio' + element.row + '&' + element.column}}"
+                              value="{{radioEntry.key}}">
+              {{radioEntry.value}}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+
+        <mat-list *ngIf="element.type === 'list'" role="list">
+          <mat-list-item *ngFor="let value of element.value"
+                         role="listitem">{{value}}</mat-list-item>
+        </mat-list>
       </div>
     </div>
-
-    <div *ngIf="element.type === 'list'">
-      <ul>
-        <li *ngFor="let value of element.value">
-          {{value}}
-        </li>
-      </ul>
-    </div>
+    <br/>
   </div>
 </div>
