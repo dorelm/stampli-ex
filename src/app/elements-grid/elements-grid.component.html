@@ -3,21 +3,10 @@
     <div class="grid-row">
       <div *ngFor="let element of row"
            class="grid-cell">
-
-        <app-dr-textbox *ngIf="element.type === 'textbox'" [element]="element">
-        </app-dr-textbox>
-
-        <app-dr-combobox *ngIf="element.type === 'combobox'" [element]="element">
-        </app-dr-combobox>
-
-        <app-dr-radio-group *ngIf="element.type === 'radiobutton'" [element]="element">
-        </app-dr-radio-group>
-
-
-        <mat-list *ngIf="element.type === 'list'" role="list">
-          <mat-list-item *ngFor="let value of element.value"
-                         role="listitem">{{value}}</mat-list-item>
-        </mat-list>
+        <app-dr-textbox *ngIf="element.type === 'textbox'" [element]="element"></app-dr-textbox>
+        <app-dr-combobox *ngIf="element.type === 'combobox'" [element]="element"></app-dr-combobox>
+        <app-dr-radio-group *ngIf="element.type === 'radiobutton'" [element]="element"></app-dr-radio-group>
+        <app-dr-list *ngIf="element.type === 'list'" [element]="element"></app-dr-list>
       </div>
     </div>
     <br/>

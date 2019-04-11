@@ -10,6 +10,7 @@ import {MaterialModulesModule} from './material-modules/material-modules.module'
 import { DrComboboxComponent } from './dr-combobox/dr-combobox.component';
 import { DrTextboxComponent } from './dr-textbox/dr-textbox.component';
 import { DrRadioGroupComponent } from './dr-radio-group/dr-radio-group.component';
+import { DrListComponent } from './dr-list/dr-list.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DrRadioGroupComponent } from './dr-radio-group/dr-radio-group.component
     ElementsGridComponent,
     DrComboboxComponent,
     DrTextboxComponent,
-    DrRadioGroupComponent
+    DrRadioGroupComponent,
+    DrListComponent
   ],
   imports: [
     BrowserModule,
