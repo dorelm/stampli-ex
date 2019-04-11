@@ -7,19 +7,11 @@
         <app-dr-textbox *ngIf="element.type === 'textbox'" [element]="element">
         </app-dr-textbox>
 
+        <app-dr-combobox *ngIf="element.type === 'combobox'" [element]="element">
+        </app-dr-combobox>
 
-        <app-dr-combobox *ngIf="element.type === 'combobox'" [element]="element"></app-dr-combobox>
-
-        <div *ngIf="element.type === 'radiobutton'">
-          <label id="{{'radio' + element.row + '&' + element.column}}">{{element.name}}</label>
-          <mat-radio-group>
-            <mat-radio-button *ngFor="let radioEntry of element.value"
-                              name="{{'radio' + element.row + '&' + element.column}}"
-                              value="{{radioEntry.key}}">
-              {{radioEntry.value}}
-            </mat-radio-button>
-          </mat-radio-group>
-        </div>
+        <app-dr-radio-group *ngIf="element.type === 'radiobutton'" [element]="element">
+        </app-dr-radio-group>
 
 
         <mat-list *ngIf="element.type === 'list'" role="list">

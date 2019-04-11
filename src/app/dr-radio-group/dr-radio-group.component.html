@@ -1,0 +1,10 @@
+<div>
+  <label id="{{'radio' + element.row + '&' + element.column}}">{{element.name}}</label>
+  <mat-radio-group>
+    <mat-radio-button *ngFor="let radioEntry of element.value"
+                      name="{{'radio' + element.row + '&' + element.column}}"
+                      value="{{radioEntry.key}}">
+      {{radioEntry.value}}
+    </mat-radio-button>
+  </mat-radio-group>
+</div>

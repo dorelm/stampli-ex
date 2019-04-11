@@ -9,6 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModulesModule} from './material-modules/material-modules.module';
 import { DrComboboxComponent } from './dr-combobox/dr-combobox.component';
 import { DrTextboxComponent } from './dr-textbox/dr-textbox.component';
+import { DrRadioGroupComponent } from './dr-radio-group/dr-radio-group.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DrTextboxComponent } from './dr-textbox/dr-textbox.component';
     DrawerInputComponent,
     ElementsGridComponent,
     DrComboboxComponent,
-    DrTextboxComponent
+    DrTextboxComponent,
+    DrRadioGroupComponent
   ],
   imports: [
     BrowserModule,
