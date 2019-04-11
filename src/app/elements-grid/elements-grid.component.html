@@ -1,0 +1,26 @@
+<div *ngFor="let row of parsedElementsGridService.grid">
+  <div *ngFor="let element of row">
+    <span>{{element.name}}</span>
+    <input *ngIf="element.type === 'textbox'"
+           type="text" value="{{element.value}}">
+
+    <select *ngIf="element.type === 'combobox'">
+      <option *ngFor="let entry of element.value" value="{{entry.key}}">{{entry.value}}</option>
+    </select>
+
+    <div *ngIf="element.type === 'radiobutton'">
+      <div *ngFor="let radioEntry of element.value">
+        <input type="radio" name="{{'radio' + element.row + '&' + element.column}}"
+               value="{{radioEntry.key}}"> {{radioEntry.value}}<br>
+      </div>
+    </div>
+
+    <div *ngIf="element.type === 'list'">
+      <ul>
+        <li *ngFor="let value of element.value">
+          {{value}}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
